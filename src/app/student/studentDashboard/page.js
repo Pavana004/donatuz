@@ -59,8 +59,8 @@ const StudentDashboard = () => {
             <h1 className="my-auto">Welcome - {studentData.username}</h1>
           </div>
           <div className="w-full h-auto overflow-hidden   text-center uppercase font-bold align-middle lg:flex lg:justify-evenly ">
-            <div className="w-[200px] h-[200px] shadow-lg shadow-green-300  rounded-full flex  flex-col align-middle justify-center">
-              <p className="text-center text-sm my-auto">
+            <div className="w-[200px] h-[200px] relative shadow-lg shadow-green-300  rounded-full flex flex-col  justify-center">
+              <p className="text-center text-sm my-auto ">
                 Total classes attended
               </p>
             </div>

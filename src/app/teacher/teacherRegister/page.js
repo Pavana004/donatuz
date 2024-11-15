@@ -25,7 +25,9 @@ const TeachcerRegisterPage = () => {
       setLoading(true);
       await axios.post("/api/teacher/register", data);
       router.push("/teacher/teacherLogin");
+      alert("Registration successful! Please login.");
     } catch (error) {
+      alert(error.response.data.message);
       console.log("Error during registration: ", error);
     } finally {
       setLoading(false);

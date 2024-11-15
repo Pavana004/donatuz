@@ -8,7 +8,8 @@ connect();
 
 export async function POST(req) {
   try {
-    const { studentname, student_id, classes, status, date } = await req.json();
+    const { studentname, student_id, classes, status, date, email } =
+      await req.json();
 
     //create new user in database
     const newUser = new StudentData({
@@ -17,6 +18,7 @@ export async function POST(req) {
       classes,
       status,
       date,
+      email,
     });
     await newUser.save();
     return NextResponse.json(

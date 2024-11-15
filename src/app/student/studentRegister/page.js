@@ -25,8 +25,10 @@ const StudentRegisterPage = () => {
     try {
       setLoading(true);
       await axios.post("/api/student/register", data);
+      alert("Registration successful! Please login.");
       router.push("/student/studentLogin");
     } catch (error) {
+      alert(error.response.data.message);
       console.log("Error during registration: ", error);
     } finally {
       setLoading(false);
