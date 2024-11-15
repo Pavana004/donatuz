@@ -4,12 +4,14 @@ import connect from "@/app/utils/database";
 import { NextResponse } from "next/server";
 import bcrypt from "bcryptjs";
 import Student from "@/app/models/student";
+import StudentData from "@/app/models/studentData";
 
 connect();
 
 export async function POST(req) {
   try {
     const { username, email, password } = await req.json();
+
     const exitUser = await Student.findOne({ email });
     if (exitUser) {
       return NextResponse.json(
@@ -24,6 +26,7 @@ export async function POST(req) {
     //create new user in database
     const newUser = new Student({ username, email, password: hashedPassword });
     await newUser.save();
+
     return NextResponse.json({ message: "User registered." }, { status: 201 });
   } catch (error) {
     return NextResponse.json(

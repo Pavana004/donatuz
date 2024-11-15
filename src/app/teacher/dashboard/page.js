@@ -103,7 +103,7 @@ const Dashboard = () => {
               type="text"
               onChange={(e) => getStudentData(e.target.value)}
               placeholder="filter by date  or subject"
-              className="w-full bg-transparent placeholder:text-slate-800 placeholder:text-sm text-slate-700 text-md border border-green-400 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
+              className="w-[80px] lg:w-full bg-transparent placeholder:text-slate-800 placeholder:text-sm text-slate-700 text-md border border-green-400 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
               required
             />
           </div>
@@ -112,7 +112,7 @@ const Dashboard = () => {
               data={exportData}
               headers={headers}
               filename={"StudentData.csv"}
-              className=" text-sm w-[200px] h-12 bg-blue-500   hover:bg-green-400 my-auto text-white font-bold py-2 px-4 rounded-lg"
+              className=" w-[100px] text-[10px] lg:text-sm lg:w-[200px] h-12 bg-blue-500   hover:bg-green-400 my-auto text-white font-bold py-2 px-4 rounded-lg"
             >
               {" "}
               Export All Students Data
@@ -120,7 +120,7 @@ const Dashboard = () => {
           </div>
 
           <Link href="" className=" my-auto " onClick={openModal}>
-            <button className=" text-sm w-[200px] h-12 bg-blue-500   hover:bg-green-400 my-auto text-white font-bold py-2 px-4 rounded-lg">
+            <button className="w-[100px] text-sm lg:text-sm lg:w-[200px] h-12 bg-blue-500   hover:bg-green-400 my-auto text-white font-bold py-2 px-4 rounded-lg">
               Create a new Record
             </button>
           </Link>

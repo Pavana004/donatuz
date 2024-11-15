@@ -24,11 +24,6 @@ const studentDataSchema = new Schema(
       type: Date,
       required: true,
     },
-    email: {
-      type: String,
-      required: true,
-    },
-    user: [{ type: Schema.Types.ObjectId, ref: "Student" }],
   },
 
   { timestamps: true }

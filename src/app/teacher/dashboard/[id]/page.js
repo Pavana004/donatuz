@@ -75,7 +75,7 @@ const IndividualStudentData = () => {
         </Link>
       </div>
       <div className="container w-full h-[80vh] flex  justify-center align-middle ">
-        <div className="my-auto w-[50%] h-[80%]  shadow-md shadow-green-400 grid grid-cols-1 justify-center">
+        <div className="my-auto w-[90%] h-[80%]  lg:w-[50%] lg:h-[80%]  shadow-md shadow-green-400 grid grid-cols-1 justify-center">
           <h1 className="text-center uppercase text-green-400 text-xl font-bold ">
             Student Data
           </h1>
