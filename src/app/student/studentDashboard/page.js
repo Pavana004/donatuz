@@ -4,7 +4,6 @@ import axios from "axios";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { useState, useEffect } from "react";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const StudentDashboard = () => {
   const [studentData, setStudentData] = useState([]);
